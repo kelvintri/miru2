@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { fetchAnilist, POPULAR_ANIME_QUERY } from '@/src/lib/anilist'
+import { fetchAnilist, POPULAR_SEASON_QUERY } from '@/src/lib/anilist'
 import type { AnimePageResponse, AnimeMedia } from '@/src/types/anilist'
 
 export default function PopularAnime() {
@@ -13,7 +13,7 @@ export default function PopularAnime() {
   useEffect(() => {
     async function fetchPopularAnime() {
       try {
-        const data = await fetchAnilist<AnimePageResponse>(POPULAR_ANIME_QUERY, {
+        const data = await fetchAnilist<AnimePageResponse>(POPULAR_SEASON_QUERY, {
           page: 1,
           perPage: 24,
         })
