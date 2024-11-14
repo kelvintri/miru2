@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Watchlist', href: '/dashboard/watchlist' },
 ]
 
-export default function Navbar({ user }: { user: User }) {
+export function DashboardNavbar({ user }: { user: User }) {
   const pathname = usePathname()
 
   return (
